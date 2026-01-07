@@ -1,0 +1,21 @@
+{
+    "vars": {
+        "site": "",
+        "client_id": "",
+        "publishers_sites_id": ""
+    },
+    "requests": {
+        "pageview": "https://c.adskeeper.com/pv?site=${site}&client_id=${client_id}&publishers_sites_id=${publishers_sites_id}&i=1&pr=${externalReferrer}&cbuster=${random}&pvid=${pageViewId64}&implVersion=19&cxurl=${canonicalUrl}&pv_types=tpv&scua=\"${uach(architecture)}\"&scub=\"${uach(bitness)}\"&scu_amp=\"${uach(brands)}\"&scufvl_amp=\"${uach(fullVersionList)}\"&scum=?((${uach(mobile)}, true), 1, 0)&scumd=\"${uach(model)}\"&scup=\"${uach(platform)}\"&scupv=\"${uach(platformVersion)}\"&scufv=\"${uach(uaFullVersion)}\"&scuw=?((${uach(wow64)}, true), 1, 0)&gdpr_consent=((CONSENT_METADATA(consentStringType), 1), ${consentString})((CONSENT_METADATA(consentStringType), 2), ${consentString})&gdpr=((CONSENT_METADATA(gdprApplies), true), 1)((CONSENT_METADATA(gdprApplies), false), 0)&us_privacy=((CONSENT_METADATA(consentStringType), 3), ${consentString})&gpp=((CONSENT_METADATA(consentStringType), 4), ${consentString})&gpp_sid=((CONSENT_METADATA(consentStringType), 4), CONSENT_METADATA(gppSectionId))"
+    },
+    "triggers": {
+        "trackPageview": {
+            "on": "visible",
+            "request": "pageview"
+        }
+    },
+    "transport": {
+        "beacon": false,
+        "xhrpost": false,
+        "image": true
+    }
+}
